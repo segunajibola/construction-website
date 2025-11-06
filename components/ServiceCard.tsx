@@ -1,6 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card";
 
-export function ServiceCard({ title, desc }) {
+export function ServiceCard({ title, desc }: { title: string; desc: string }) {
   return (
     <Card>
       <CardContent className="p-6">
