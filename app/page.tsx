@@ -9,7 +9,7 @@ export default function Home() {
   ];
 
   return (
-    <div className="container mx-auto px-4 py-10">
+    <div className="container mx-auto px-0.5 py-10">
       <Hero />
       <div className="grid md:grid-cols-3 gap-6 mt-10">
         {services.map((s) => (
