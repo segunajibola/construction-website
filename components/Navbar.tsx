@@ -1,81 +1,101 @@
 "use client";
 
 import Link from "next/link";
-import { Button } from "@/components/ui/button";
 import { useState } from "react";
-import { Menu, X } from "lucide-react";
 
-export function Navbar() {
-  const [open, setOpen] = useState(false);
+type LinkItem = { name: string; href: string };
 
-  const navLinks = [
+export function Navbar({
+  links = [
     { name: "Home", href: "/" },
     { name: "Services", href: "/services" },
     { name: "Projects", href: "/projects" },
     { name: "About", href: "/about" },
     { name: "Contact", href: "/contact" },
-  ];
+  ],
+}: {
+  links?: LinkItem[];
+}) {
+  const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 bg-white shadow-sm">
-      <div className="container mx-auto flex items-center justify-between px-4 py-4">
-        {/* Logo */}
+    <header className="relative z-50">
+      <div className="container mx-auto px-4 py-3 flex items-center justify-between">
         <Link href="/" className="text-2xl font-bold text-blue-700">
-          BuildPro<span className="text-gray-700">.</span>
+          BuildPro
         </Link>
 
-        {/* Desktop Nav */}
+        {/* Two-dash menu button */}
+        <button
+          aria-label={open ? "Close menu" : "Open menu"}
+          aria-expanded={open}
+          onClick={() => setOpen((s) => !s)}
+          className="relative w-10 h-10 flex items-center justify-center md:hidden"
+        >
+          {/* Two dashes */}
+          <span
+            className={
+              "block absolute h-0.5 w-6 bg-current transition-transform duration-300 " +
+              (open ? "rotate-45 translate-y-0" : "-translate-y-2")
+            }
+            style={{ transformOrigin: "center" }}
+          />
+          <span
+            className={
+              "block absolute h-0.5 w-6 bg-current transition-transform duration-300 " +
+              (open ? "-rotate-45 translate-y-0" : "translate-y-2")
+            }
+            style={{ transformOrigin: "center" }}
+          />
+        </button>
+
+        {/* Desktop nav */}
         <nav className="hidden md:flex gap-8">
-          {navLinks.map((link) => (
+          {links.map((l) => (
             <Link
-              key={link.name}
-              href={link.href}
-              className="text-gray-700 hover:text-blue-700 transition-colors"
+              key={l.href}
+              href={l.href}
+              className="text-gray-700 hover:text-blue-700"
             >
-              {link.name}
+              {l.name}
             </Link>
           ))}
         </nav>
-
-        {/* CTA Button */}
-        <div className="hidden md:block">
-          <Button asChild>
-            <Link href="/contact">Get a Quote</Link>
-          </Button>
-        </div>
-
-        {/* Mobile menu button */}
-        <button
-          className="md:hidden text-gray-700"
-          onClick={() => setOpen(!open)}
-        >
-          {open ? <X size={24} /> : <Menu size={24} />}
-        </button>
       </div>
 
-      {/* Mobile Menu */}
-      {open && (
-        <nav className="md:hidden bg-white border-t border-gray-200 py-4">
-          <ul className="flex flex-col items-center gap-4">
-            {navLinks.map((link) => (
-              <li key={link.name}>
-                <Link
-                  href={link.href}
-                  className="text-gray-700 hover:text-blue-700 text-lg"
-                  onClick={() => setOpen(false)}
-                >
-                  {link.name}
-                </Link>
-              </li>
-            ))}
-            <li>
-              <Button asChild size="sm">
-                <Link href="/contact">Get a Quote</Link>
-              </Button>
-            </li>
-          </ul>
+      {/* Mobile panel */}
+      <div
+        className={
+          "fixed inset-x-4 top-16 rounded-xl bg-white/95 backdrop-blur-sm shadow-lg md:hidden transition-transform duration-300 " +
+          (open
+            ? "translate-y-0 opacity-100"
+            : "-translate-y-4 opacity-0 pointer-events-none")
+        }
+        style={{ transformOrigin: "top" }}
+      >
+        <nav className="flex flex-col gap-4 px-6 py-6">
+          {links.map((l) => (
+            <Link
+              key={l.href}
+              href={l.href}
+              onClick={() => setOpen(false)}
+              className="py-2 text-lg font-medium text-gray-800 hover:text-blue-700"
+            >
+              {l.name}
+            </Link>
+          ))}
+
+          <div className="pt-4 border-t border-gray-100">
+            <Link
+              href="/contact"
+              onClick={() => setOpen(false)}
+              className="inline-block w-full text-center py-2 px-4 rounded-md font-semibold shadow-sm bg-blue-700 text-white"
+            >
+              Get a Quote
+            </Link>
+          </div>
         </nav>
-      )}
+      </div>
     </header>
   );
 }
