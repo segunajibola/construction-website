@@ -5,8 +5,7 @@ export function Hero() {
         {/* Text Block */}
         <div className="flex-1 text-left space-y-6">
           <h1 className="text-4xl md:text-6xl font-bold text-gray-900 leading-tight">
-            Building the <span className="text-blue-700">Future</span> with
-            Precision & Quality
+            Building with Precision andQuality
           </h1>
 
           <p className="text-lg md:text-xl text-gray-600 max-w-lg">
@@ -23,7 +22,7 @@ export function Hero() {
           <img
             src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=870"
             alt="Construction site"
-            className="w-full h-auto shadow-lg object-cover"
+            className="w-full h-[60vh] md:h-auto shadow-lg object-cover"
           />
         </div>
       </div>

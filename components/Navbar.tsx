@@ -19,7 +19,7 @@ export function Navbar({
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="relative z-50">
+    <header className="fixed w-full bg-white z-50">
       <div className="container mx-auto px-4 py-3 flex items-center justify-between">
         <Link href="/" className="text-2xl font-bold text-blue-700">
           BuildPro
@@ -30,19 +30,19 @@ export function Navbar({
           aria-label={open ? "Close menu" : "Open menu"}
           aria-expanded={open}
           onClick={() => setOpen((s) => !s)}
-          className="relative w-10 h-10 flex items-center justify-center md:hidden"
+          className="relative w-10 h-7 flex items-center justify-center md:hidden"
         >
           {/* Two dashes */}
           <span
             className={
-              "block absolute h-0.5 w-6 bg-current transition-transform duration-300 " +
+              "block absolute h-px w-8 bg-current transition-transform duration-300 " +
               (open ? "rotate-45 translate-y-0" : "-translate-y-2")
             }
             style={{ transformOrigin: "center" }}
           />
           <span
             className={
-              "block absolute h-0.5 w-6 bg-current transition-transform duration-300 " +
+              "block absolute h-px w-8 bg-current transition-transform duration-300 " +
               (open ? "-rotate-45 translate-y-0" : "translate-y-2")
             }
             style={{ transformOrigin: "center" }}
