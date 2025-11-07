@@ -1,7 +1,7 @@
 export function Hero() {
   return (
-    <section className="w-full bg-gray-50">
-      <div className="container mx-auto flex flex-col md:flex-row items-center justify-between px-2 py-16 md:py-24">
+    <section className="w-full">
+      <div className="container mx-auto flex flex-col md:flex-row items-center justify-between px-1 pt-8 md:py-24">
         {/* Text Block */}
         <div className="flex-1 text-left space-y-6">
           <h1 className="text-4xl md:text-6xl font-bold text-gray-900 leading-tight">
