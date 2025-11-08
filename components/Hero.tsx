@@ -5,7 +5,7 @@ export function Hero() {
         {/* Text Block */}
         <div className="flex-1 text-left space-y-6">
           <h1 className="text-3xl md:text-5xl font-bold text-gray-900 leading-tight">
-            Building with Precision andQuality
+            Building with Precision and Quality
           </h1>
 
           <p className="text-lg md:text-xl text-gray-600 max-w-lg">
