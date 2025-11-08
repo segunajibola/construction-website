@@ -4,7 +4,7 @@ import { services } from "@/components/data/services";
 export function ServiceCard() {
   return (
     <section className="mt-4 py-10 bg-gray-50">
-      <div className="mx-auto px-2">
+      <div className="mx-auto px-3">
         <h2 className="text-4xl font-bold text-gray-900 text-center mb-10">
           Our Services
         </h2>
@@ -13,7 +13,7 @@ export function ServiceCard() {
           {services.map((service, index) => (
             <div
               key={index}
-              className="bg-white rounded-xl shadow-sm overflow-hidden hover:shadow-md transition"
+              className="bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md transition"
             >
               <Image
                 src={service.image}
