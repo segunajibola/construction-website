@@ -1,10 +1,10 @@
 export function Hero() {
   return (
     <section className="w-full">
-      <div className="container mx-auto flex flex-col md:flex-row items-center justify-between px-1 pt-8 md:py-24">
+      <div className="container mx-auto flex flex-col md:flex-row items-center justify-between px-3 pt-8 md:py-24">
         {/* Text Block */}
         <div className="flex-1 text-left space-y-6">
-          <h1 className="text-4xl md:text-6xl font-bold text-gray-900 leading-tight">
+          <h1 className="text-3xl md:text-5xl font-bold text-gray-900 leading-tight">
             Building with Precision andQuality
           </h1>
 
@@ -13,9 +13,9 @@ export function Hero() {
             craftsmanship, and sustainability.
           </p>
 
-          <button className="mt-4 px-6 py-3 bg-blue-700 text-white text-lg font-semibold rounded-lg hover:bg-blue-800 transition">
+          {/* <button className="mt-4 px-6 py-3 bg-blue-700 text-white text-lg font-semibold rounded-lg hover:bg-blue-800 transition">
             Get a Free Quote
-          </button>
+          </button> */}
         </div>
 
         <div className="flex-1 mt-10 md:mt-0">
