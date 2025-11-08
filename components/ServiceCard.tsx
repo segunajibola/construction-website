@@ -3,9 +3,11 @@ import { services } from "@/components/data/services";
 
 export function ServiceCard() {
   return (
-    <section className="py-10 bg-gray-50">
-      <div className="mx-auto px-6">
-        <h2 className="text-4xl font-bold text-gray-900 mb-10">Our Services</h2>
+    <section className="mt-4 py-10 bg-gray-50">
+      <div className="mx-auto px-2">
+        <h2 className="text-4xl font-bold text-gray-900 text-center mb-10">
+          Our Services
+        </h2>
 
         <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
           {services.map((service, index) => (
