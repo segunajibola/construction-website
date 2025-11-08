@@ -13,7 +13,7 @@ export function ServiceCard() {
           {services.map((service, index) => (
             <div
               key={index}
-              className="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-lg transition"
+              className="bg-white rounded-xl shadow-sm overflow-hidden hover:shadow-md transition"
             >
               <Image
                 src={service.image}
