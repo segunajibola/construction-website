@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useState } from "react";
+import { Moon } from "lucide-react";
 
 type LinkItem = { name: string; href: string };
 
@@ -19,37 +20,36 @@ export function Navbar({
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="fixed w-full bg-white z-50">
+    <header className="fixed w-full bg-gray-50 z-50">
       <div className="container mx-auto px-4 py-3 flex items-center justify-between">
         <Link href="/" className="text-2xl font-bold text-blue-700">
           BuildPro
         </Link>
+        <div className="flex items-center gap-4">
+          <Moon className="w-6 h-6 text-blue-700" />
+          <button
+            aria-label={open ? "Close menu" : "Open menu"}
+            aria-expanded={open}
+            onClick={() => setOpen((s) => !s)}
+            className="relative w-10 h-7 flex items-center justify-center md:hidden"
+          >
+            <span
+              className={
+                "block absolute h-px w-8 bg-current transition-transform duration-300 " +
+                (open ? "rotate-45 translate-y-0" : "-translate-y-2")
+              }
+              style={{ transformOrigin: "center" }}
+            />
+            <span
+              className={
+                "block absolute h-px w-8 bg-current transition-transform duration-300 " +
+                (open ? "-rotate-45 translate-y-0" : "translate-y-2")
+              }
+              style={{ transformOrigin: "center" }}
+            />
+          </button>
+        </div>
 
-        {/* Two-dash menu button */}
-        <button
-          aria-label={open ? "Close menu" : "Open menu"}
-          aria-expanded={open}
-          onClick={() => setOpen((s) => !s)}
-          className="relative w-10 h-7 flex items-center justify-center md:hidden"
-        >
-          {/* Two dashes */}
-          <span
-            className={
-              "block absolute h-px w-8 bg-current transition-transform duration-300 " +
-              (open ? "rotate-45 translate-y-0" : "-translate-y-2")
-            }
-            style={{ transformOrigin: "center" }}
-          />
-          <span
-            className={
-              "block absolute h-px w-8 bg-current transition-transform duration-300 " +
-              (open ? "-rotate-45 translate-y-0" : "translate-y-2")
-            }
-            style={{ transformOrigin: "center" }}
-          />
-        </button>
-
-        {/* Desktop nav */}
         <nav className="hidden md:flex gap-8">
           {links.map((l) => (
             <Link
