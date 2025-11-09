@@ -3,6 +3,7 @@ import { About } from "@/components/About";
 import { ServiceCard } from "@/components/ServiceCard";
 import { CoreValues } from "@/components/CoreValues";
 import { Contact } from "@/components/Contact";
+import { LatestProjects } from "@/components/LatestProjects";
 export default function Home() {
   return (
     <div className="w-full pt-10">
@@ -10,6 +11,7 @@ export default function Home() {
       <About />
       <ServiceCard />
       <CoreValues />
+      <LatestProjects />
       <Contact />
     </div>
   );
