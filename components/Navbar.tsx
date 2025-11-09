@@ -30,7 +30,7 @@ export function Navbar({
     <header className="fixed w-full bg-gray-50 z-50 dark:bg-gray-900">
       <div className="container mx-auto px-4 py-3 flex items-center justify-between">
         <Link href="/" className="text-2xl font-bold text-blue-700">
-          BuildPro
+          Lakia
         </Link>
         <div className="flex items-center gap-4">
           {theme === "dark" ? (

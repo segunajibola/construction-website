@@ -142,8 +142,11 @@ export function Contact() {
         {/* Email */}
         <div className="flex items-center gap-4 text-gray-700 dark:text-gray-300">
           <Mail className="w-6 h-6 text-blue-700" />
-          <a href="mailto:info@buildpro.com" className="hover:underline">
-            info@buildpro.com
+          <a
+            href="mailto:info@lakiaconstruction.com"
+            className="hover:underline"
+          >
+            info@lakiaconstruction.com
           </a>
         </div>
 
@@ -151,14 +154,14 @@ export function Contact() {
         <div className="flex items-center gap-4 text-gray-700 dark:text-gray-300">
           <Phone className="w-6 h-6 text-blue-700" />
           <a href="tel:+1234567890" className="hover:underline">
-            +1 (234) 567-890
+            +234 913 316 2222
           </a>
         </div>
 
         {/* Location */}
         <div className="flex items-center gap-4 text-gray-700 dark:text-gray-300">
           <MapPin className="w-6 h-6 text-blue-700" />
-          <span>123 Main Street, City, Country</span>
+          <span>Lekki Pennisula II, Lagos 106104, Lagos, Nigeria</span>
         </div>
 
         {/* Social Media */}

@@ -23,8 +23,11 @@ export function About() {
             Building the Future, One Project at a Time
           </h2>
           <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
-            At <span className="font-semibold text-blue-700">BuildPro</span>,
-            we’re more than just builders — we’re problem-solvers, innovators,
+            At{" "}
+            <span className="font-semibold text-blue-700">
+              Lakia Construction Company
+            </span>
+            , we’re more than just builders — we’re problem-solvers, innovators,
             and partners in progress. From homes to highways, our work stands
             for quality and trust.
             <Link href="/about" className="inline text-blue-500">

@@ -7,7 +7,9 @@ export function Footer() {
         <div className="grid md:grid-cols-3 gap-10 text-gray-700 dark:text-gray-500">
           {/* Company Info */}
           <div>
-            <h3 className="text-2xl font-bold text-blue-700 mb-3">BuildPro</h3>
+            <h3 className="text-2xl font-bold text-blue-700 mb-3">
+              Lakia Construction Company
+            </h3>
             <p className="text-sm leading-relaxed ">
               We bring your construction dreams to life — from design to
               completion. Reliable, professional, and on time.
@@ -43,15 +45,18 @@ export function Footer() {
             <h4 className="font-semibold mb-3 dark:text-gray-200">
               Contact Us
             </h4>
-            <p className="text-sm">📍 25 Adeola Street, Lagos, Nigeria</p>
-            <p className="text-sm">📞 +234 801 234 5678</p>
-            <p className="text-sm">✉️ info@buildpro.com</p>
+            <p className="text-sm">
+              📍 Lekki Penninsula II, Lagos 106104, Lagos
+            </p>
+            <p className="text-sm">📞 +234 913 316 2222</p>
+            <p className="text-sm">✉️ info@lakiaconstruction.com</p>
           </div>
         </div>
       </div>
 
       <div className="border-t border-gray-300 py-4 text-center text-sm text-gray-500">
-        © {new Date().getFullYear()} BuildPro Construction. All rights reserved.
+        © {new Date().getFullYear()} Lakia Construction Company. All rights
+        reserved.
       </div>
     </footer>
   );

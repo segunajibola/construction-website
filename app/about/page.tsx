@@ -4,7 +4,7 @@ export default function About() {
       {/* Hero Section */}
       <section className="container mx-auto px-6 py-20 text-center">
         <h1 className="text-5xl font-extrabold text-gray-900 dark:text-gray-300 mb-6">
-          About <span className="text-blue-700">BuildPro</span>
+          About <span className="text-blue-700">Lakia</span>
         </h1>
         <p className="max-w-2xl mx-auto text-lg text-gray-600 dark:text-gray-300">
           We’re a trusted construction and infrastructure company dedicated to
@@ -40,11 +40,11 @@ export default function About() {
         <div className="bg-blue-700 text-white rounded-sm p-3 md:p-16">
           <h2 className="text-2xl font-bold mb-6">Our Experience</h2>
           <p className="text-blue-100 max-w-3xl mb-6 dark:text-gray-200">
-            With over a decade of experience, BuildPro has successfully
-            completed residential, commercial, and public infrastructure
-            projects across the nation. Our team of skilled engineers,
-            architects, and builders ensures that every detail is handled with
-            care — from foundation to finish.
+            With over a decade of experience, Lakia has successfully completed
+            residential, commercial, and public infrastructure projects across
+            the nation. Our team of skilled engineers, architects, and builders
+            ensures that every detail is handled with care — from foundation to
+            finish.
           </p>
           <ul className="grid sm:grid-cols-2 gap-4 text-blue-50 font-medium">
             <li>🏗️ 150+ Completed Projects</li>
