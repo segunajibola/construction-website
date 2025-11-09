@@ -4,6 +4,7 @@ import { ServiceCard } from "@/components/ServiceCard";
 import { CoreValues } from "@/components/CoreValues";
 import { Contact } from "@/components/Contact";
 import { LatestProjects } from "@/components/LatestProjects";
+import { Map } from "@/components/Map";
 export default function Home() {
   return (
     <div className="w-full pt-10">
@@ -12,6 +13,7 @@ export default function Home() {
       <ServiceCard />
       <CoreValues />
       <LatestProjects />
+      <Map />
       <Contact />
     </div>
   );
