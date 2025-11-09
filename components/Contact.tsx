@@ -51,25 +51,25 @@ export function Contact() {
   };
 
   return (
-    <section className="bg-gray-50 py-10" id="contact">
+    <section className="bg-gray-50 dark:bg-gray-900 py-10" id="contact">
       <div className="container mx-auto px-3">
-        <h2 className="text-3xl font-bold text-center text-gray-900 mb-4">
+        <h2 className="text-3xl font-bold text-center text-gray-900 dark:text-gray-300">
           Contact Us
         </h2>
-        <p className="text-gray-600 text-center mb-10">
+        <p className="text-gray-600 dark:text-gray-300 text-center mb-10">
           Have a project in mind? We'd love to hear from you. Fill out the form
           below and we'll get back to you.
         </p>
 
         <form
           onSubmit={handleSubmit}
-          className="bg-white p-3 rounded-sm shadow-sm space-y-3"
+          className="bg-white dark:bg-gray-900 p-3 rounded-sm shadow-sm space-y-3"
         >
           {/* Name */}
           <div>
             <label
               htmlFor="name"
-              className="block text-sm font-medium text-gray-700 mb-2"
+              className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
             >
               Name
             </label>
@@ -89,7 +89,7 @@ export function Contact() {
           <div>
             <label
               htmlFor="email"
-              className="block text-sm font-medium text-gray-700 mb-2"
+              className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
             >
               Email
             </label>
@@ -109,7 +109,7 @@ export function Contact() {
           <div>
             <label
               htmlFor="message"
-              className="block text-sm font-medium text-gray-700 mb-2"
+              className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
             >
               Message
             </label>
@@ -128,19 +128,19 @@ export function Contact() {
           {/* Submit Button */}
           <button
             type="submit"
-            className="w-full bg-blue-700 text-white py-3 rounded-lg font-semibold hover:bg-blue-800 transition"
+            className="w-full bg-blue-700 dark:bg-gray-300 text-white dark:text-gray-900 py-3 rounded-lg font-semibold hover:bg-blue-800 transition"
           >
             Send Message
           </button>
         </form>
       </div>
-      <div className="my-6 mx-3 px-3 bg-white rounded-sm shadow-sm p-3 space-y-6">
-        <h3 className="text-2xl font-bold text-gray-900 text-center">
+      <div className="my-6 mx-3 px-3 bg-white dark:bg-gray-900 rounded-sm dark:border-gray-300 border shadow-sm p-3 space-y-6">
+        <h3 className="text-2xl font-bold text-gray-900 dark:text-gray-100 text-center">
           Contact Information
         </h3>
 
         {/* Email */}
-        <div className="flex items-center gap-4 text-gray-700">
+        <div className="flex items-center gap-4 text-gray-700 dark:text-gray-300">
           <Mail className="w-6 h-6 text-blue-700" />
           <a href="mailto:info@buildpro.com" className="hover:underline">
             info@buildpro.com
@@ -148,7 +148,7 @@ export function Contact() {
         </div>
 
         {/* Phone */}
-        <div className="flex items-center gap-4 text-gray-700">
+        <div className="flex items-center gap-4 text-gray-700 dark:text-gray-300">
           <Phone className="w-6 h-6 text-blue-700" />
           <a href="tel:+1234567890" className="hover:underline">
             +1 (234) 567-890
@@ -156,7 +156,7 @@ export function Contact() {
         </div>
 
         {/* Location */}
-        <div className="flex items-center gap-4 text-gray-700">
+        <div className="flex items-center gap-4 text-gray-700 dark:text-gray-300">
           <MapPin className="w-6 h-6 text-blue-700" />
           <span>123 Main Street, City, Country</span>
         </div>
@@ -171,7 +171,7 @@ export function Contact() {
                 href={social.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-700 hover:text-blue-700 transition"
+                className="text-gray-700 dark:text-gray-300 hover:text-blue-700 transition"
                 aria-label={social.label}
               >
                 <Icon className="w-6 h-6" />

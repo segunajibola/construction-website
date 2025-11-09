@@ -5,7 +5,7 @@ import { CoreValues } from "@/components/CoreValues";
 import { Contact } from "@/components/Contact";
 export default function Home() {
   return (
-    <div className="container mx-auto px-0.5 py-10">
+    <div className="w-full pt-10">
       <Hero />
       <About />
       <ServiceCard />

@@ -3,6 +3,8 @@
 import Link from "next/link";
 import { useState } from "react";
 import { Moon } from "lucide-react";
+import { Sun } from "lucide-react";
+import { useTheme } from "next-themes";
 
 type LinkItem = { name: string; href: string };
 
@@ -18,15 +20,24 @@ export function Navbar({
   links?: LinkItem[];
 }) {
   const [open, setOpen] = useState(false);
+  const { theme, setTheme } = useTheme();
+
+  const toggleTheme = () => {
+    setTheme(theme === "dark" ? "light" : "dark");
+  };
 
   return (
-    <header className="fixed w-full bg-gray-50 z-50">
+    <header className="fixed w-full bg-gray-50 z-50 dark:bg-gray-900">
       <div className="container mx-auto px-4 py-3 flex items-center justify-between">
         <Link href="/" className="text-2xl font-bold text-blue-700">
           BuildPro
         </Link>
         <div className="flex items-center gap-4">
-          <Moon className="w-6 h-6 text-blue-700" />
+          {theme === "dark" ? (
+            <Sun className="w-6 h-6 text-gray-100" onClick={toggleTheme} />
+          ) : (
+            <Moon className="w-6 h-6 text-gray-900" onClick={toggleTheme} />
+          )}
           <button
             aria-label={open ? "Close menu" : "Open menu"}
             aria-expanded={open}

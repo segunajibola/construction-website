@@ -35,12 +35,12 @@ export function CoreValues() {
   ];
 
   return (
-    <section className="bg-white py-20">
+    <section className="bg-white dark:bg-gray-900 py-20">
       <div className="container mx-auto px-3 text-center">
-        <h2 className="text-4xl font-bold text-gray-900 mb-4">
+        <h2 className="text-4xl font-bold text-gray-900 dark:text-gray-100 mb-4">
           Our Core Values
         </h2>
-        <p className="text-gray-600 text-center mb-12">
+        <p className="text-gray-600 dark:text-gray-300 text-center mb-12">
           We believe in building responsibly — combining technology, teamwork,
           and trust to create lasting impact.
         </p>
@@ -57,7 +57,9 @@ export function CoreValues() {
                   <Icon className="w-8 h-8" />
                 </div>
                 <h3 className="text-xl font-semibold mb-2">{value.title}</h3>
-                <p className="text-gray-600 text-sm">{value.desc}</p>
+                <p className="text-gray-600 dark:text-gray-300 text-sm">
+                  {value.desc}
+                </p>
               </div>
             );
           })}
