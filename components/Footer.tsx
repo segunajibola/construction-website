@@ -53,10 +53,19 @@ export function Footer() {
           </div>
         </div>
       </div>
-
       <div className="border-t border-gray-300 py-4 text-center text-sm text-gray-500">
         © {new Date().getFullYear()} Lakia Construction Company. All rights
         reserved.
+      </div>
+      <div className="text-center text-sm text-gray-500 mb-4 dark:text-gray-400">
+        Built & Maintained by{" "}
+        <a
+          href="https://www.pagestrap.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Pagestrap
+        </a>
       </div>
     </footer>
   );
