@@ -5,7 +5,7 @@ import { projects } from "@/components/data/projects";
 export function LatestProjects() {
   return (
     <section id="projects" className="py-16 bg-gray-50 dark:bg-gray-900">
-      <div className="max-w-6xl mx-auto px-6 text-center">
+      <div className="max-w-6xl mx-auto px-3 text-center">
         <h2 className="text-3xl md:text-4xl font-bold mb-8 text-gray-900 dark:text-gray-100">
           Latest Projects
         </h2>
@@ -14,7 +14,7 @@ export function LatestProjects() {
           {projects.slice(0, 3).map((project, index) => (
             <div
               key={index}
-              className="bg-white dark:bg-gray-800 rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow"
+              className="bg-white dark:bg-gray-900 rounded-sm shadow-md overflow-hidden hover:shadow-lg transition-shadow"
             >
               <Image
                 src={project.image}
