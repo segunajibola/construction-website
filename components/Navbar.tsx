@@ -32,6 +32,19 @@ export function Navbar({
         <Link href="/" className="text-2xl font-bold text-blue-700">
           Lakia
         </Link>
+
+        <nav className="hidden md:flex gap-8">
+          {links.map((l) => (
+            <Link
+              key={l.href}
+              href={l.href}
+              className="text-gray-700 dark:text-gray-300 hover:text-blue-700"
+            >
+              {l.name}
+            </Link>
+          ))}
+        </nav>
+
         <div className="flex items-center gap-4">
           {theme === "dark" ? (
             <Sun className="w-6 h-6 text-gray-100" onClick={toggleTheme} />
@@ -60,18 +73,6 @@ export function Navbar({
             />
           </button>
         </div>
-
-        <nav className="hidden md:flex gap-8">
-          {links.map((l) => (
-            <Link
-              key={l.href}
-              href={l.href}
-              className="text-gray-700 hover:text-blue-700"
-            >
-              {l.name}
-            </Link>
-          ))}
-        </nav>
       </div>
 
       {/* Mobile panel */}
