@@ -14,7 +14,7 @@ export function LatestProjects() {
           {projects.slice(0, 3).map((project, index) => (
             <div
               key={index}
-              className="bg-white dark:bg-gray-900 rounded-sm shadow-md overflow-hidden hover:shadow-lg transition-shadow"
+              className="bg-white dark:bg-gray-800 rounded-sm shadow-md overflow-hidden hover:shadow-lg transition-shadow"
             >
               <Image
                 src={project.image}
