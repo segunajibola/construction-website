@@ -1,7 +1,8 @@
-// components/LatestProjects.tsx
 import Image from "next/image";
 import Link from "next/link";
 import { projects } from "@/components/data/projects";
+import { ScrollReveal } from "@/components/ScrollReveal";
+
 export function LatestProjects() {
   return (
     <section id="projects" className="py-16 bg-gray-50 dark:bg-gray-900">
@@ -12,8 +13,8 @@ export function LatestProjects() {
 
         <div className="grid md:grid-cols-3 gap-8">
           {projects.slice(0, 3).map((project, index) => (
+            <ScrollReveal key={index} delay={0.1}>
             <div
-              key={index}
               className="bg-white dark:bg-gray-800 rounded-sm shadow-md overflow-hidden hover:shadow-lg transition-shadow"
             >
               <Image
@@ -32,6 +33,7 @@ export function LatestProjects() {
                 </p>
               </div>
             </div>
+            </ScrollReveal>
           ))}
         </div>
 

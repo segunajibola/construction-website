@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { services } from "@/components/data/services";
+import { ScrollReveal } from "@/components/ScrollReveal";
 
 export function ServiceCard() {
   return (
@@ -11,24 +12,25 @@ export function ServiceCard() {
 
         <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
           {services.map((service, index) => (
-            <div
-              key={index}
-              className="bg-white dark:bg-gray-800 rounded-sm shadow-xs overflow-hidden hover:shadow-sm transition"
-            >
-              <Image
-                src={service.image}
-                alt={service.title}
-                width={600}
-                height={400}
-                className="w-full h-48 object-cover"
-              />
-              <div className="p-2">
-                <h3 className="text-lg font-semibold mb-2">{service.title}</h3>
-                <p className="text-gray-600 dark:text-gray-300">
-                  {service.desc}
-                </p>
+            <ScrollReveal key={index}delay={0.1}>
+              <div className="bg-white dark:bg-gray-800 rounded-sm shadow-xs overflow-hidden hover:shadow-sm transition">
+                <Image
+                  src={service.image}
+                  alt={service.title}
+                  width={600}
+                  height={400}
+                  className="w-full h-48 object-cover"
+                />
+                <div className="p-2">
+                  <h3 className="text-lg font-semibold mb-2">
+                    {service.title}
+                  </h3>
+                  <p className="text-gray-600 dark:text-gray-300">
+                    {service.desc}
+                  </p>
+                </div>
               </div>
-            </div>
+            </ScrollReveal>
           ))}
         </div>
       </div>

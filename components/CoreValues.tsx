@@ -1,4 +1,5 @@
 import { Leaf, Cpu, Award, Users, Shield, Heart } from "lucide-react";
+import { ScrollReveal } from "@/components/ScrollReveal";
 
 export function CoreValues() {
   const values = [
@@ -49,18 +50,17 @@ export function CoreValues() {
           {values.map((value, i) => {
             const Icon = value.icon;
             return (
-              <div
-                key={i}
-                className="flex flex-col items-center text-center py-3 px-2 border rounded-sm shadow-xs hover:shadow-sm transition"
-              >
-                <div className="p-2 bg-blue-100 text-blue-700 rounded-full mb-4">
-                  <Icon className="w-8 h-8" />
+              <ScrollReveal key={i} delay={0.1}>
+                <div className="flex flex-col items-center text-center py-3 px-2 border rounded-sm shadow-xs hover:shadow-sm transition">
+                  <div className="p-2 bg-blue-100 text-blue-700 rounded-full mb-4">
+                    <Icon className="w-8 h-8" />
+                  </div>
+                  <h3 className="text-xl font-semibold mb-2">{value.title}</h3>
+                  <p className="text-gray-600 dark:text-gray-300 text-sm">
+                    {value.desc}
+                  </p>
                 </div>
-                <h3 className="text-xl font-semibold mb-2">{value.title}</h3>
-                <p className="text-gray-600 dark:text-gray-300 text-sm">
-                  {value.desc}
-                </p>
-              </div>
+              </ScrollReveal>
             );
           })}
         </div>
