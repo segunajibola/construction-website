@@ -78,7 +78,7 @@ export function Navbar({
       {/* Mobile panel */}
       <div
         className={
-          "fixed inset-x-4 top-16 rounded-xl bg-white/95 backdrop-blur-sm shadow-lg md:hidden transition-transform duration-300 " +
+          "fixed inset-x-4 top-16 rounded-xl bg-white/95 dark:bg-gray-900 backdrop-blur-sm shadow-lg md:hidden transition-transform duration-300 " +
           (open
             ? "translate-y-0 opacity-100"
             : "-translate-y-4 opacity-0 pointer-events-none")
@@ -91,7 +91,7 @@ export function Navbar({
               key={l.href}
               href={l.href}
               onClick={() => setOpen(false)}
-              className="py-2 text-lg font-medium text-gray-800 hover:text-blue-700"
+              className="py-2 text-lg font-medium text-gray-800 dark:text-gray-300 hover:text-blue-700"
             >
               {l.name}
             </Link>
@@ -99,7 +99,7 @@ export function Navbar({
 
           <div className="pt-4 border-t border-gray-100">
             <Link
-              href="/contact"
+              href="/#contact"
               onClick={() => setOpen(false)}
               className="inline-block w-full text-center py-2 px-4 rounded-md font-semibold shadow-sm bg-blue-700 text-white"
             >
