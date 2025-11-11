@@ -3,7 +3,7 @@ export default function About() {
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900 text-gray-800 dark:text-gray-300">
       {/* Hero Section */}
       <section className="container mx-auto px-6 py-20 text-center">
-        <h1 className="text-5xl font-extrabold text-gray-900 dark:text-gray-300 mb-6">
+        <h1 className="text-3xl font-extrabold text-gray-900 dark:text-gray-300 mb-6">
           About <span className="text-blue-700">Lakia</span>
         </h1>
         <p className="max-w-2xl mx-auto text-lg text-gray-600 dark:text-gray-300">

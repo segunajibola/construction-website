@@ -4,15 +4,15 @@ import { ScrollReveal } from "@/components/ScrollReveal";
 
 export function ServiceCard() {
   return (
-    <section className="py-10 bg-gray-50 dark:bg-gray-900">
+    <section className="py-10 bg-gray-50 dark:bg-gray-900" id="services">
       <div className="mx-auto px-3">
-        <h2 className="text-2xl font-bold text-gray-900 dark:text-gray-300 text-center mb-10">
+        <h2 className="text-2xl font-bold text-gray-900 dark:text-gray-300 text-center my-10">
           Our Services
         </h2>
 
         <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
           {services.map((service, index) => (
-            <ScrollReveal key={index}delay={0.1}>
+            <ScrollReveal key={index} delay={0.1}>
               <div className="bg-white dark:bg-gray-800 rounded-sm shadow-xs overflow-hidden hover:shadow-sm transition">
                 <Image
                   src={service.image}

@@ -5,31 +5,30 @@ import {
   Mail,
   Phone,
   MapPin,
-  Twitter,
-  Facebook,
-  Instagram,
-  Linkedin,
+  FacebookIcon,
+  InstagramIcon,
+  LinkedinIcon,
 } from "lucide-react";
-
+import { FaXTwitter } from "react-icons/fa6";
 export function Contact() {
   const socialLinks = [
     {
-      icon: Twitter,
+      icon: FaXTwitter,
       href: "https://twitter.com/yourcompany",
       label: "Twitter",
     },
     {
-      icon: Facebook,
+      icon: FacebookIcon,
       href: "https://facebook.com/yourcompany",
       label: "Facebook",
     },
     {
-      icon: Instagram,
+      icon: InstagramIcon,
       href: "https://instagram.com/yourcompany",
       label: "Instagram",
     },
     {
-      icon: Linkedin,
+      icon: LinkedinIcon,
       href: "https://linkedin.com/company/yourcompany",
       label: "LinkedIn",
     },
@@ -52,7 +51,7 @@ export function Contact() {
 
   return (
     <section className="bg-gray-50 dark:bg-gray-900 py-10" id="contact">
-      <div className="container mx-auto px-3">
+      <div className="container mx-auto px-3 pt-12">
         <h2 className="text-3xl font-bold text-center text-gray-900 dark:text-gray-300">
           Contact Us
         </h2>

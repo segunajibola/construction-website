@@ -4,8 +4,8 @@ import { ArrowRight } from "lucide-react";
 
 export function About() {
   return (
-    <section className="bg-gray-50 dark:bg-gray-900 py-10">
-      <div className="container mx-auto px-3 flex flex-col md:flex-row items-center gap-10">
+    <section className="bg-gray-50 dark:bg-gray-900 py-10" id="about">
+      <div className="container mx-auto px-3 pt-5 flex flex-col md:flex-row items-center gap-10">
         {/* Image Block */}
         {/* <div className="flex-1">
           <Image
