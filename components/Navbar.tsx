@@ -83,7 +83,7 @@ export function Navbar({
             ? "translate-y-0 opacity-100"
             : "-translate-y-4 opacity-0 pointer-events-none")
         }
-        style={{ transformOrigin: "top" }}
+        style={{ transformOrigin: "righjt" }}
       >
         <nav className="flex flex-col gap-4 px-6 py-6">
           {links.map((l) => (
